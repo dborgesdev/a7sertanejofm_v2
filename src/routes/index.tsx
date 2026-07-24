@@ -108,8 +108,8 @@ function Index() {
         <LiveRadioSection />
         <MomentsGridSection />
         <AppEcosystemSection />
-        <InstagramSection />
         <ConversionBannerSection />
+        <InstagramSection />
       </main>
       <FooterSection />
       <CopyrightBar />

@@ -12,29 +12,31 @@ const BADGES = [
 
 export function AppEcosystemSection() {
   return (
-    <SectionWrapper id="app" tone="light" glow>
+    <SectionWrapper id="app" tone="wood" glow>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-gold">
+          <p className="inline-flex items-center gap-2 rounded-full border border-[rgba(26,19,12,0.25)] bg-[rgba(26,19,12,0.06)] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#8c5e14] mb-4 backdrop-blur-md">
             Aplicativo Oficial
           </p>
-          <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl leading-tight">
-            <span className="text-gold-gradient">Sertanejo FM em Todos</span>{" "}
-            <span className="text-cream">os Seus Dispositivos</span>
+          <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl leading-tight text-coffee-medium font-bold">
+            <span className="text-gold-gradient-dark">Sertanejo FM</span>{" "}
+            <span>em Todos os Seus Dispositivos</span>
           </h2>
-          <p className="mt-6 text-taupe leading-relaxed">
+          <p className="mt-6 text-[#4a3e31] font-medium leading-relaxed">
             Sem complicações. A Sertanejo FM foi desenvolvida para rodar com alta fidelidade sonora
             e estabilidade em qualquer tela. Onde tiver internet, a nossa frequência está com você.
           </p>
 
-          <div className="mt-8 rounded-2xl glass-card p-5">
-            <p className="text-sm text-cream">
-              <span className="text-gold-bright font-semibold">Baixe agora</span> o aplicativo
-              oficial da Sertanejo FM —{" "}
-              <span className="italic text-taupe">A mais gostosa de ouvir!</span>
+          {/* Subcard com Contraste no Fundo Claro */}
+          <div className="mt-8 rounded-2xl border border-[rgba(26,19,12,0.2)] bg-[rgba(255,255,255,0.45)] backdrop-blur-md p-5 shadow-sm">
+            <p className="text-sm text-coffee-medium">
+              <span className="text-[#8c5e14] font-bold">Baixe agora</span> o aplicativo oficial da
+              Sertanejo FM —{" "}
+              <span className="italic text-[#4a3e31] font-medium">A mais gostosa de ouvir!</span>
             </p>
           </div>
 
+          {/* Botões do App em Café Escuro (Alto Contraste) */}
           <div className="mt-6 flex flex-wrap gap-3">
             {BADGES.map(({ icon: Icon, label, strong }) => (
               <a
@@ -42,12 +44,16 @@ export function AppEcosystemSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 key={strong}
-                className="group relative flex items-center gap-3 rounded-xl border border-[rgba(229,169,60,0.4)] bg-[#0a0805] px-4 py-3 text-left hover:border-gold-bright transition-colors overflow-hidden"
+                className="group relative flex items-center gap-3 rounded-xl border border-[rgba(26,19,12,0.2)] bg-coffee-medium px-4 py-3 text-left hover:border-gold-bright hover:shadow-lg transition-all duration-300 overflow-hidden"
               >
                 <Icon className="h-7 w-7 text-cream group-hover:text-gold-bright transition-colors" />
                 <div>
-                  <div className="text-[10px] uppercase tracking-widest text-taupe">{label}</div>
-                  <div className="text-sm font-semibold text-cream">{strong}</div>
+                  <div className="text-[10px] uppercase tracking-widest text-taupe opacity-80">
+                    {label}
+                  </div>
+                  <div className="text-sm font-semibold text-cream group-hover:text-gold-bright transition-colors">
+                    {strong}
+                  </div>
                 </div>
                 <span className="pointer-events-none absolute inset-0 -translate-x-full bg-[linear-gradient(110deg,transparent,rgba(255,215,0,0.2),transparent)] group-hover:translate-x-full transition-transform duration-700" />
               </a>
@@ -55,17 +61,18 @@ export function AppEcosystemSection() {
           </div>
         </div>
 
+        {/* Smartphone Flutuante com Sombra de Profundidade */}
         <motion.div
           animate={{ y: [-10, 10, -10] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           className="relative mx-auto"
         >
-          <div className="absolute inset-0 bg-radial-gold blur-3xl opacity-70" />
+          <div className="absolute inset-0 bg-[#8c5e14]/20 blur-3xl rounded-full opacity-60" />
           <img
             src={phone}
             alt="App Sertanejo FM"
             loading="lazy"
-            className="relative w-full max-w-md drop-shadow-[0_40px_60px_rgba(0,0,0,0.6)]"
+            className="relative w-full max-w-md drop-shadow-[0_30px_45px_rgba(26,19,12,0.35)]"
           />
         </motion.div>
       </div>

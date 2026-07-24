@@ -7,8 +7,15 @@ import hero3 from "@/assets/hero-3.webp";
 import hero4 from "@/assets/hero-4.webp";
 import hero5 from "@/assets/hero-5.webp";
 import hero6 from "@/assets/hero-6.webp";
+import mhero1 from "@/assets/hero-1m.webp";
+import mhero2 from "@/assets/hero-2m.webp";
+import mhero3 from "@/assets/hero-3m.webp";
+import mhero4 from "@/assets/hero-4m.webp";
+import mhero5 from "@/assets/hero-5m.webp";
+import mhero6 from "@/assets/hero-6m.webp";
 
 const slides = [hero1, hero2, hero3, hero4, hero5, hero6];
+const mSlides = [mhero1, mhero2, mhero3, mhero4, mhero5, mhero6];
 
 export function HeroSection() {
   const [i, setI] = useState(0);
@@ -24,30 +31,49 @@ export function HeroSection() {
 
   return (
     <section id="top" className="relative min-h-screen w-full pt-32 overflow-hidden">
-      {/* Ken Burns bg */}
-      {slides.map((src, idx) => (
-        <motion.div
-          key={src}
-          initial={false}
-          animate={{ opacity: idx === i ? 1 : 0, scale: idx === i ? 1.08 : 1 }}
-          transition={{ opacity: { duration: 1.4 }, scale: { duration: 8, ease: "linear" } }}
-          className="absolute inset-0"
-        >
-          <img
-            src={src}
-            alt=""
-            aria-hidden
-            className="h-full w-full object-cover"
-            loading={idx === 0 ? "eager" : "lazy"}
-          />
-        </motion.div>
-      ))}
-
+      <div className="md:hidden">
+        {mSlides.map((src, idx) => (
+          <motion.div
+            key={src}
+            initial={false}
+            animate={{ opacity: idx === i ? 1 : 0, scale: idx === i ? 1.08 : 1 }}
+            transition={{ opacity: { duration: 1.4 }, scale: { duration: 8, ease: "linear" } }}
+            className="absolute inset-0"
+          >
+            <img
+              src={src}
+              alt=""
+              aria-hidden
+              className="h-full w-full object-cover"
+              loading={idx === 0 ? "eager" : "lazy"}
+            />
+          </motion.div>
+        ))}
+      </div>
+      <div className="hidden md:block">
+        {slides.map((src, idx) => (
+          <motion.div
+            key={src}
+            initial={false}
+            animate={{ opacity: idx === i ? 1 : 0, scale: idx === i ? 1.08 : 1 }}
+            transition={{ opacity: { duration: 1.4 }, scale: { duration: 8, ease: "linear" } }}
+            className="absolute inset-0"
+          >
+            <img
+              src={src}
+              alt=""
+              aria-hidden
+              className="h-full w-full object-cover"
+              loading={idx === 0 ? "eager" : "lazy"}
+            />
+          </motion.div>
+        ))}
+      </div>
       {/* 1. Camada de escurecimento uniforme sobre a imagem */}
       {/* <div className="absolute inset-0 bg-black/45" /> */}
 
       {/* 2. Radial Vignette direcionado para o centro */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(9,7,5,0.6)_0%,rgba(9,7,5,0.1)_70%,rgba(9,7,5,0.8)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(9,7,5,0.5)_0%,rgba(9,7,5,0.1)_70%,rgba(9,7,5,0.8)_100%)]" />
 
       {/* Degradê inferior de transição */}
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-coffee-dark via-coffee-dark/20 to-transparent" />
@@ -61,10 +87,10 @@ export function HeroSection() {
           className="mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(229,169,60,0.5)] bg-coffee-dark/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-cream backdrop-blur-md shadow-lg"
         >
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-red-400" />
           </span>
-          ● AO VIVO
+          AO VIVO
         </motion.div>
 
         {/* 3. Aplicação de drop-shadow intenso nos textos para garantir contraste em qualquer imagem */}

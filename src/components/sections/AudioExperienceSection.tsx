@@ -31,7 +31,7 @@ const CARDS = [
 
 export function AudioExperienceSection() {
   return (
-    <SectionWrapper id="estilos" tone="light" glow>
+    <SectionWrapper id="estilos" tone="amberTransition" glow>
       <SectionHeader
         eyebrow="A Experiência Sonora"
         title="A Trilha Sonora Definitiva para Cada Momento do Seu Dia"
@@ -58,7 +58,7 @@ export function AudioExperienceSection() {
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-[#0d0905] via-[#0d0905]/50 to-transparent" />
+                {/* <div className="absolute inset-0 bg-linear-to-t from-[#0d0905] via-[#0d0905]/50 to-transparent" /> */}
               </div>
               <div className="p-4 md:p-6 absolute bottom-0 bg-[#0d0905]">
                 <h3 className="font-display text-lg sm:text-xl md:text-lg lg:text-xl tracking-wide text-cream group-hover:text-gold-bright transition-colors">
