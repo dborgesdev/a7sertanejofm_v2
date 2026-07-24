@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../ui/SectionWrapper";
 import { AppleIcon, PlayStoreIcon, WindowsIcon } from "../ui/BrandIcons";
-import phone from "../../assets/phone-mockup.png";
+import phone from "../../assets/phone-mockup.webp";
+import { SITE_DATA } from "@/config/siteData";
 
 const BADGES = [
   { icon: PlayStoreIcon, label: "Disponível no", strong: "Google Play" },
@@ -11,42 +12,45 @@ const BADGES = [
 
 export function AppEcosystemSection() {
   return (
-    <SectionWrapper id="app" tone="medium" glow>
+    <SectionWrapper id="app" tone="light" glow>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#e5a93c]">
+          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-gold">
             Aplicativo Oficial
           </p>
           <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl leading-tight">
-            <span className="text-gold-gradient">Sertanejo FM em Todos</span>
-            <br />
-            <span className="text-[#f5f2eb]">os Seus Dispositivos</span>
+            <span className="text-gold-gradient">Sertanejo FM em Todos</span>{" "}
+            <span className="text-cream">os Seus Dispositivos</span>
           </h2>
-          <p className="mt-6 text-[#a89f91] leading-relaxed">
-            Sem complicações. A Sertanejo FM foi desenvolvida para rodar com alta fidelidade sonora e
-            estabilidade em qualquer tela. Onde tiver internet, a nossa frequência está com você.
+          <p className="mt-6 text-taupe leading-relaxed">
+            Sem complicações. A Sertanejo FM foi desenvolvida para rodar com alta fidelidade sonora
+            e estabilidade em qualquer tela. Onde tiver internet, a nossa frequência está com você.
           </p>
 
           <div className="mt-8 rounded-2xl glass-card p-5">
-            <p className="text-sm text-[#f5f2eb]">
-              <span className="text-[#ffd700] font-semibold">Baixe agora</span> o aplicativo oficial da
-              Sertanejo FM — <span className="italic text-[#a89f91]">A mais gostosa de ouvir!</span>
+            <p className="text-sm text-cream">
+              <span className="text-gold-bright font-semibold">Baixe agora</span> o aplicativo
+              oficial da Sertanejo FM —{" "}
+              <span className="italic text-taupe">A mais gostosa de ouvir!</span>
             </p>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
             {BADGES.map(({ icon: Icon, label, strong }) => (
-              <button
+              <a
+                href={SITE_DATA.appUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 key={strong}
-                className="group relative flex items-center gap-3 rounded-xl border border-[rgba(229,169,60,0.4)] bg-[#0a0805] px-4 py-3 text-left hover:border-[#ffd700] transition-colors overflow-hidden"
+                className="group relative flex items-center gap-3 rounded-xl border border-[rgba(229,169,60,0.4)] bg-[#0a0805] px-4 py-3 text-left hover:border-gold-bright transition-colors overflow-hidden"
               >
-                <Icon className="h-7 w-7 text-[#f5f2eb] group-hover:text-[#ffd700] transition-colors" />
+                <Icon className="h-7 w-7 text-cream group-hover:text-gold-bright transition-colors" />
                 <div>
-                  <div className="text-[10px] uppercase tracking-widest text-[#a89f91]">{label}</div>
-                  <div className="text-sm font-semibold text-[#f5f2eb]">{strong}</div>
+                  <div className="text-[10px] uppercase tracking-widest text-taupe">{label}</div>
+                  <div className="text-sm font-semibold text-cream">{strong}</div>
                 </div>
                 <span className="pointer-events-none absolute inset-0 -translate-x-full bg-[linear-gradient(110deg,transparent,rgba(255,215,0,0.2),transparent)] group-hover:translate-x-full transition-transform duration-700" />
-              </button>
+              </a>
             ))}
           </div>
         </div>

@@ -11,7 +11,7 @@ export function CopyrightBar() {
             href={SITE_DATA.developerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block text-[#e5a93c] hover:text-[#ffd700] transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 hover:after:w-full after:bg-gold-gradient after:transition-all after:duration-500"
+            className="relative inline-block text-gold hover:text-gold-bright transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 hover:after:w-full after:bg-gold-gradient after:transition-all after:duration-500"
           >
             {SITE_DATA.developerName}
           </a>

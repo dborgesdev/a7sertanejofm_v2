@@ -1,69 +1,113 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { SITE_DATA } from "../../config/siteData";
-import { Equalizer } from "../ui/Equalizer";
 import { SectionWrapper } from "../ui/SectionWrapper";
 
+import hero1 from "@/assets/hero-1.webp";
+import hero2 from "@/assets/hero-2.webp";
+import hero3 from "@/assets/hero-3.webp";
+import hero4 from "@/assets/hero-4.webp";
+import hero5 from "@/assets/hero-5.webp";
+import hero6 from "@/assets/hero-6.webp";
+
+const images = [hero1, hero2, hero3, hero4, hero5, hero6];
+
 export function PlayerSection() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <SectionWrapper id="player" tone="dark" glow className="pt-24">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.8 }}
-        className="mx-auto max-w-4xl text-center"
-      >
-        <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#e5a93c]">
-          RÁDIO AO VIVO
-        </p>
-        <h2 className="mt-3 font-display text-4xl md:text-6xl">
-          <span className="text-gold-gradient">Rádio Sertanejo FM</span>
-        </h2>
-        <p className="mt-4 text-base md:text-lg text-[#a89f91]">
-          Música sem interrupções. 24h de pura emoção e sintonia perfeita.
-        </p>
+    <SectionWrapper id="player" tone="dark" glow className="pt-24 pb-20">
+      <div className="mx-auto max-w-5xl px-4 relative z-10">
+        {/* Cabeçalho da Seção */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-10"
+        >
+          <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(229,169,60,0.4)] bg-[rgba(255,215,0,0.08)] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-gold mb-4 backdrop-blur-md">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-red-400" />
+            </span>
+            Rádio ao vivo
+          </span>
 
-        <div className="mt-10 relative mx-auto max-w-3xl">
-          {/* Glowing frame */}
-          <div className="absolute -inset-6 rounded-3xl bg-radial-gold blur-2xl opacity-70" />
-          <div
-            className="relative rounded-3xl p-[2px]"
-            style={{
-              background:
-                "linear-gradient(135deg, #b37b14 0%, #ffd700 45%, #b37b14 100%)",
-            }}
-          >
-            <div className="rounded-[calc(1.5rem-2px)] bg-[#0a0805] p-4 md:p-6 shadow-[0_0_50px_rgba(229,169,60,0.2)]">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <span className="relative flex h-3 w-3">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-400" />
-                  </span>
-                  <span className="text-xs uppercase tracking-widest text-[#f5f2eb]">
-                    Transmitindo agora
-                  </span>
-                </div>
-                <Equalizer bars={12} className="w-28" />
-              </div>
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-wide">
+            Rádio <span className="text-gold-gradient">Sertanejo FM</span>
+          </h2>
 
-              <div className="relative overflow-hidden rounded-xl bg-black">
-                <iframe
-                  src={SITE_DATA.streamIframeUrl}
-                  title="Player Sertanejo FM Ao Vivo"
-                  className="w-full"
-                  style={{ height: 180, border: 0 }}
-                  allow="autoplay"
+          <p className="mt-3 text-[#d9d2c4] text-sm md:text-base font-light">
+            Música sem interrupções. 24h de pura emoção e sintonia perfeita.
+          </p>
+        </motion.div>
+
+        {/* Card do Player com Slideshow integrados */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="relative rounded-3xl overflow-hidden border border-[rgba(229,169,60,0.3)] shadow-[0_10px_40px_rgba(0,0,0,0.8)] bg-[#0a0805]"
+        >
+          {/* Topo: Slideshow de Imagens */}
+          <div className="relative h-64 sm:h-80 overflow-hidden">
+            {images.map((img, i) => (
+              <img
+                key={i}
+                src={img}
+                alt=""
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+                  i === current
+                    ? "opacity-100 scale-105 transition-transform duration-10000"
+                    : "opacity-0 scale-100"
+                }`}
+                loading="lazy"
+              />
+            ))}
+
+            {/* Vínheta e Gradientes Escuros */}
+            {/* <div className="absolute inset-0 bg-black/30" /> */}
+            <div className="absolute inset-0 bg-linear-to-t from-[#0a0805] via-[#0a0805]/20 to-transparent" />
+
+            {/* Barra Equalizadora Interativa Dourada */}
+            <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex items-end gap-1.5 px-6 py-3 rounded-2xl">
+              {[...Array(24)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="w-1 rounded-full bg-linear-to-t from-[#aa771c] via-gold-bright to-[#fcf6ba]"
+                  animate={{
+                    height: [8, Math.random() * 32 + 8, 8],
+                  }}
+                  transition={{
+                    duration: 0.6 + Math.random() * 0.4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: i * 0.04,
+                  }}
                 />
-              </div>
-
-              <p className="mt-4 text-[11px] uppercase tracking-[0.3em] text-[#a89f91]">
-                {SITE_DATA.slogan}
-              </p>
+              ))}
             </div>
           </div>
-        </div>
-      </motion.div>
+
+          {/* Base: Player Iframe em Container Dedicado */}
+          <div className="relative bg-[#0a0805] border-t border-[rgba(229,169,60,0.15)]">
+            <iframe
+              src={SITE_DATA.streamIframeUrl}
+              className="h-10 sm:h-20 w-full border-0 rounded-xl"
+              title="Sertanejo FM - Player ao vivo"
+              allow="autoplay"
+            />
+          </div>
+        </motion.div>
+      </div>
     </SectionWrapper>
   );
 }

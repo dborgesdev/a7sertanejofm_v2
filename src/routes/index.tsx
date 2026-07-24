@@ -10,14 +10,14 @@ import { ConversionBannerSection } from "../components/sections/ConversionBanner
 import { FooterSection } from "../components/sections/FooterSection";
 import { CopyrightBar } from "../components/sections/CopyrightBar";
 import { StickyAudioPlayer } from "../components/ui/StickyAudioPlayer";
+import { Navbar } from "@/components/sections/Navbar";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
       {
-        title:
-          "Sertanejo FM | A Rádio Sertaneja 24 Horas On-line do Brasil para o Mundo",
+        title: "Sertanejo FM | A Rádio Sertaneja 24 Horas On-line do Brasil para o Mundo",
       },
       {
         name: "description",
@@ -41,18 +41,20 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="bg-[#090705] text-[#f5f2eb]">
-      <HeroSection />
-      <PlayerSection />
-      <AudioExperienceSection />
-      <LiveRadioSection />
-      <MomentsGridSection />
-      <AppEcosystemSection />
-      <InstagramSection />
-      <ConversionBannerSection />
+    <div className="bg-coffee-dark text-cream">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <PlayerSection />
+        <AudioExperienceSection />
+        <LiveRadioSection />
+        <MomentsGridSection />
+        <AppEcosystemSection />
+        <InstagramSection />
+        <ConversionBannerSection />
+      </main>
       <FooterSection />
       <CopyrightBar />
-      <StickyAudioPlayer />
-    </main>
+    </div>
   );
 }
