@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
           "Rádio sertaneja online 24h com transmissão contínua sem interrupções. Modão raiz e grandes lançamentos.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://sertanejofm.com.br/" },
+      { property: "og:url", content: "https://sertanejofm.com/" },
       { property: "og:image", content: "/sertanejo-fm-logo.webp" },
       { property: "og:image:alt", content: "Logotipo Sertanejo FM" },
 
@@ -58,11 +58,11 @@ export const Route = createFileRoute("/")({
           "@graph": [
             {
               "@type": "RadioStation",
-              "@id": "https://sertanejofm.com.br/#station",
+              "@id": "https://sertanejofm.com/#station",
               name: "Sertanejo FM",
-              url: "https://sertanejofm.com.br",
-              logo: "https://sertanejofm.com.br/sertanejo-fm-logo.webp",
-              image: "https://sertanejofm.com.br/sertanejo-fm-logo.webp",
+              url: "https://sertanejofm.com",
+              logo: "https://sertanejofm.com/sertanejo-fm-logo.webp",
+              image: "https://sertanejofm.com/sertanejo-fm-logo.webp",
               description: "Rádio Sertaneja 24 Horas On-line do Brasil para o Mundo.",
               genre: ["Sertanejo", "Modão", "Sertanejo Universitário"],
               broadcaster: {
@@ -73,12 +73,12 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "WebSite",
-              "@id": "https://sertanejofm.com.br/#website",
-              url: "https://sertanejofm.com.br",
+              "@id": "https://sertanejofm.com/#website",
+              url: "https://sertanejofm.com",
               name: "Sertanejo FM",
               description: "A Rádio Sertaneja 24 Horas On-line",
               publisher: {
-                "@id": "https://sertanejofm.com.br/#station",
+                "@id": "https://sertanejofm.com/#station",
               },
               copyrightHolder: {
                 "@type": "Organization",

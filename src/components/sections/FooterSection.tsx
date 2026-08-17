@@ -2,6 +2,7 @@ import { MapPin } from "lucide-react";
 import { SITE_DATA } from "../../config/siteData";
 import { InstagramIcon, WhatsAppIcon } from "../ui/BrandIcons";
 import logo from "@/assets/sertanejo-fm-logo.webp";
+import clubeLogo from "@/assets/cluberadios.webp";
 
 export function FooterSection() {
   return (
@@ -74,6 +75,10 @@ export function FooterSection() {
           >
             <WhatsAppIcon className="h-4 w-4" /> Pedir Música
           </a> */}
+
+          <div className="mt-4 flex items-center gap-4">
+            <img alt="Clube de Rádios" className="h-16 w-auto" src={clubeLogo} />
+          </div>
         </div>
       </div>
     </footer>
