@@ -47,7 +47,7 @@ export function StickyAudioPlayer() {
                 Ao vivo
               </div>
               <div className="overflow-hidden whitespace-nowrap text-sm text-[#f5f2eb]">
-                <span className="inline-block">Sertanejo FM — Transmissão 24h · A mais gostosa de ouvir!</span>
+                <span className="inline-block">A7 Sertanejo FM — Transmissão 24h · A mais gostosa de ouvir!</span>
               </div>
             </div>
             <Equalizer bars={5} className="h-6 w-10 shrink-0" />
