@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_ITEMS, SITE_DATA } from "@/config/siteData";
-import logo from "@/assets/sertanejo-fm-logo.webp";
+import logo from "@/assets/a7-sertanejo-fm-logo.webp";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

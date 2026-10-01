@@ -1,7 +1,7 @@
 import { MapPin } from "lucide-react";
 import { SITE_DATA } from "../../config/siteData";
 import { InstagramIcon, WhatsAppIcon } from "../ui/BrandIcons";
-import logo from "@/assets/sertanejo-fm-logo.webp";
+import logo from "@/assets/a7-sertanejo-fm-logo.webp";
 import clubeLogo from "@/assets/cluberadios.webp";
 
 export function FooterSection() {
