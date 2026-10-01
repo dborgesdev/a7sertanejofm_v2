@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "../ui/SectionWrapper";
 import { AppleIcon, PlayStoreIcon, WindowsIcon } from "../ui/BrandIcons";
 import phone from "../../assets/phone-mockup.webp";
+import a7Symbol from "../../assets/a7-branco.webp";
 import { SITE_DATA } from "@/config/siteData";
 
 const BADGES = [
@@ -13,7 +14,7 @@ const BADGES = [
 export function AppEcosystemSection() {
   return (
     <SectionWrapper id="app" tone="wood" glow>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-[rgba(26,19,12,0.25)] bg-[rgba(26,19,12,0.06)] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#8c5e14] mb-4 backdrop-blur-md">
             Aplicativo Oficial
@@ -23,8 +24,9 @@ export function AppEcosystemSection() {
             <span>em Todos os Seus Dispositivos</span>
           </h2>
           <p className="mt-6 text-[#4a3e31] font-medium leading-relaxed">
-            Sem complicações. A A7 Sertanejo FM foi desenvolvida para rodar com alta fidelidade sonora
-            e estabilidade em qualquer tela. Onde tiver internet, a nossa frequência está com você.
+            Sem complicações. A A7 Sertanejo FM foi desenvolvida para rodar com alta fidelidade
+            sonora e estabilidade em qualquer tela. Onde tiver internet, a nossa frequência está com
+            você.
           </p>
 
           {/* Subcard com Contraste no Fundo Claro */}
@@ -61,11 +63,18 @@ export function AppEcosystemSection() {
           </div>
         </div>
 
+        <div
+          className="pointer-events-none absolute bottom-0 left-[60%] z-0 hidden w-60 -translate-x-1/2 lg:block"
+          aria-hidden="true"
+        >
+          <img src={a7Symbol} alt="" className="h-auto w-full " />
+        </div>
+
         {/* Smartphone Flutuante com Sombra de Profundidade */}
         <motion.div
           animate={{ y: [-10, 10, -10] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="relative mx-auto"
+          className="relative z-10 mx-auto lg:mr-0 lg:ml-auto"
         >
           <div className="absolute inset-0 bg-[#8c5e14]/20 blur-3xl rounded-full opacity-60" />
           <img
