@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://a7sertanejofm.com.br/" },
-      { property: "og:image", content: "/sertanejo-fm-logo.webp" },
+      { property: "og:image", content: "/a7-sertanejo-fm-logo.webp" },
       { property: "og:image:alt", content: "Logotipo A7 Sertanejo FM" },
 
       /* Twitter Cards */
@@ -48,7 +48,7 @@ export const Route = createFileRoute("/")({
         content:
           "Ouça a A7 Sertanejo FM ao vivo 24h. A frequência que conecta tradição e os maiores sucessos.",
       },
-      { name: "twitter:image", content: "/sertanejo-fm-logo.webp" },
+      { name: "twitter:image", content: "/a7-sertanejo-fm-logo.webp" },
     ],
     scripts: [
       {
@@ -61,8 +61,8 @@ export const Route = createFileRoute("/")({
               "@id": "https://a7sertanejofm.com.br/#station",
               name: "A7 Sertanejo FM",
               url: "https://a7sertanejofm.com.br",
-              logo: "https://a7sertanejofm.com.br/sertanejo-fm-logo.webp",
-              image: "https://a7sertanejofm.com.br/sertanejo-fm-logo.webp",
+              logo: "https://a7sertanejofm.com.br/a7-sertanejo-fm-logo.webp",
+              image: "https://a7sertanejofm.com.br/a7-sertanejo-fm-logo.webp",
               description: "Rádio Sertaneja 24 Horas On-line do Brasil para o Mundo.",
               genre: ["Sertanejo", "Modão", "Sertanejo Universitário"],
               broadcaster: {
