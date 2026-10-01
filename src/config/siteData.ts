@@ -1,9 +1,9 @@
 export const SITE_DATA = {
-  brandName: "Sertanejo FM",
+  brandName: "A7 Sertanejo FM",
   slogan: "A mais gostosa de ouvir!",
   phone: "43998461977",
   whatsappUrl:
-    "https://wa.me/5543998461977?text=Ol%C3%A1!%20Quero%20pedir%20uma%20m%C3%BAsica%20na%20Sertanejo%20FM",
+    "https://wa.me/5543998461977?text=Ol%C3%A1!%20Quero%20pedir%20uma%20m%C3%BAsica%20na%20A7%20Sertanejo%20FM",
   email: "a7evoce@gmail.com",
   location: "Apucarana - Paraná",
   instagramHandle: "@radiosertanejofm",
