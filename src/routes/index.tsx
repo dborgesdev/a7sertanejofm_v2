@@ -16,11 +16,11 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Sertanejo FM | A Mais Gostosa de Ouvir - Rádio Sertaneja 24h" },
+      { title: "A7 Sertanejo FM | A Mais Gostosa de Ouvir - Rádio Sertaneja 24h" },
       {
         name: "description",
         content:
-          "Ouça a Sertanejo FM ao vivo 24h. Modão, sertanejo raiz e os maiores hits universitários. A rádio sertaneja mais gostosa de ouvir — do Brasil para o mundo.",
+          "Ouça a A7 Sertanejo FM ao vivo 24h. Modão, sertanejo raiz e os maiores hits universitários. A rádio sertaneja mais gostosa de ouvir — do Brasil para o mundo.",
       },
       {
         name: "keywords",
@@ -29,24 +29,24 @@ export const Route = createFileRoute("/")({
       },
 
       /* Open Graph */
-      { property: "og:title", content: "Sertanejo FM — A Mais Gostosa de Ouvir" },
+      { property: "og:title", content: "A7 Sertanejo FM — A Mais Gostosa de Ouvir" },
       {
         property: "og:description",
         content:
           "Rádio sertaneja online 24h com transmissão contínua sem interrupções. Modão raiz e grandes lançamentos.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://sertanejofm.com/" },
+      { property: "og:url", content: "https://a7sertanejofm.com.br/" },
       { property: "og:image", content: "/sertanejo-fm-logo.webp" },
-      { property: "og:image:alt", content: "Logotipo Sertanejo FM" },
+      { property: "og:image:alt", content: "Logotipo A7 Sertanejo FM" },
 
       /* Twitter Cards */
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Sertanejo FM | A Mais Gostosa de Ouvir" },
+      { name: "twitter:title", content: "A7 Sertanejo FM | A Mais Gostosa de Ouvir" },
       {
         name: "twitter:description",
         content:
-          "Ouça a Sertanejo FM ao vivo 24h. A frequência que conecta tradição e os maiores sucessos.",
+          "Ouça a A7 Sertanejo FM ao vivo 24h. A frequência que conecta tradição e os maiores sucessos.",
       },
       { name: "twitter:image", content: "/sertanejo-fm-logo.webp" },
     ],
@@ -58,31 +58,31 @@ export const Route = createFileRoute("/")({
           "@graph": [
             {
               "@type": "RadioStation",
-              "@id": "https://sertanejofm.com/#station",
-              name: "Sertanejo FM",
-              url: "https://sertanejofm.com",
-              logo: "https://sertanejofm.com/sertanejo-fm-logo.webp",
-              image: "https://sertanejofm.com/sertanejo-fm-logo.webp",
+              "@id": "https://a7sertanejofm.com.br/#station",
+              name: "A7 Sertanejo FM",
+              url: "https://a7sertanejofm.com.br",
+              logo: "https://a7sertanejofm.com.br/sertanejo-fm-logo.webp",
+              image: "https://a7sertanejofm.com.br/sertanejo-fm-logo.webp",
               description: "Rádio Sertaneja 24 Horas On-line do Brasil para o Mundo.",
               genre: ["Sertanejo", "Modão", "Sertanejo Universitário"],
               broadcaster: {
                 "@type": "Organization",
-                name: "Sertanejo FM",
+                name: "A7 Sertanejo FM",
               },
               sameAs: [],
             },
             {
               "@type": "WebSite",
-              "@id": "https://sertanejofm.com/#website",
-              url: "https://sertanejofm.com",
-              name: "Sertanejo FM",
+              "@id": "https://a7sertanejofm.com.br/#website",
+              url: "https://a7sertanejofm.com.br",
+              name: "A7 Sertanejo FM",
               description: "A Rádio Sertaneja 24 Horas On-line",
               publisher: {
-                "@id": "https://sertanejofm.com/#station",
+                "@id": "https://a7sertanejofm.com.br/#station",
               },
               copyrightHolder: {
                 "@type": "Organization",
-                name: "Sertanejo FM",
+                name: "A7 Sertanejo FM",
               },
               creator: {
                 "@type": "Organization",
