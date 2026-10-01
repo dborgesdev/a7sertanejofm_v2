@@ -19,7 +19,7 @@ export function PlayerSection() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [volume, setVolume] = useState(100);
-  const [songTitle, setSongTitle] = useState("Sertanejo FM — Ao Vivo");
+  const [songTitle, setSongTitle] = useState("A7 Sertanejo FM — Ao Vivo");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -117,7 +117,7 @@ export function PlayerSection() {
           </span>
 
           <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-wide text-coffee-medium">
-            Rádio <span className="text-gold-gradient-dark font-bold">Sertanejo FM</span>
+            Rádio <span className="text-gold-gradient-dark font-bold">A7 Sertanejo FM</span>
           </h2>
 
           <p className="mt-3 text-[#4a3e31] text-sm md:text-base font-semibold">
@@ -179,7 +179,7 @@ export function PlayerSection() {
                 type="button"
                 onClick={togglePlayback}
                 disabled={isLoading}
-                aria-label={isPlaying ? "Pausar transmissão" : "Ouvir Sertanejo FM"}
+                aria-label={isPlaying ? "Pausar transmissão" : "Ouvir A7 Sertanejo FM"}
                 className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#e9ad46] text-[#1a130c] transition-transform hover:scale-105 disabled:cursor-wait disabled:opacity-70 sm:h-14 sm:w-14"
               >
                 {isLoading ? (
@@ -193,7 +193,7 @@ export function PlayerSection() {
 
               <div className="min-w-0 flex-1">
                 <p className="mb-0.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#e9ad46]/70 sm:text-xs">
-                  Sertanejo FM
+                  A7 Sertanejo FM
                 </p>
                 <p className="truncate text-sm font-semibold text-white sm:text-lg">
                   {isLoading ? "Conectando..." : songTitle}

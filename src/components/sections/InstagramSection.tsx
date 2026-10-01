@@ -15,7 +15,7 @@ export function InstagramSection() {
           </p>
 
           <h2 className="mt-3 font-display text-4xl md:text-5xl">
-            Siga a Rádio <span className="text-gold-gradient-dark">Sertanejo FM</span>
+            Siga a Rádio <span className="text-gold-gradient-dark">A7 Sertanejo FM</span>
           </h2>
 
           <p className="mt-4 text-[#4a3e31] font-medium">
