@@ -40,7 +40,7 @@ export function LiveRadioSection() {
           <div className="relative aspect-4/5 rounded-3xl overflow-hidden border border-[rgba(179,123,20,0.3)] shadow-[0_20px_50px_rgba(26,19,12,0.12)]">
             <img
               src={studio}
-              alt="Estúdio da Sertanejo FM"
+              alt="Estúdio da A7 Sertanejo FM"
               loading="lazy"
               className="w-full h-full object-cover brightness-105 contrast-105"
             />
@@ -67,7 +67,7 @@ export function LiveRadioSection() {
           </h2>
 
           <p className="mt-6 text-[#4a3e31] leading-relaxed text-base font-normal">
-            A Sertanejo FM opera sem interrupções com transmissão digital de altíssima fidelidade.
+            A A7 Sertanejo FM opera sem interrupções com transmissão digital de altíssima fidelidade.
             Unimos tecnologia de streaming de baixa latência a uma curadoria musical contínua para
             entregar um áudio limpo, cristalino e envolvente a qualquer hora do dia — no Brasil ou
             em qualquer lugar do mundo.

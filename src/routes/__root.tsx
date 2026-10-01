@@ -77,19 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=5" },
-      { title: "Sertanejo FM | A Rádio Sertaneja 24 Horas" },
+      { title: "A7 Sertanejo FM | A Rádio Sertaneja 24 Horas" },
       {
         name: "description",
         content:
-          "Sertanejo FM - A rádio sertaneja 24 horas no ar. Onde o modão raiz e os novos lançamentos se encontram.",
+          "A7 Sertanejo FM - A rádio sertaneja 24 horas no ar. Onde o modão raiz e os novos lançamentos se encontram.",
       },
       { name: "author", content: "Douglas Borges - Smart Local (https://smartlocal.com.br)" },
       { name: "designer", content: "Smart Local — https://smartlocal.com.br" },
-      { name: "publisher", content: "Sertanejo FM" },
+      { name: "publisher", content: "A7 Sertanejo FM" },
       { name: "robots", content: "index, follow" },
 
       /* Open Graph Default */
-      { property: "og:site_name", content: "Sertanejo FM" },
+      { property: "og:site_name", content: "A7 Sertanejo FM" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
 
@@ -119,7 +119,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>

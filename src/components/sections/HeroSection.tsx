@@ -101,7 +101,7 @@ export function HeroSection() {
           className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] max-w-5xl drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]"
         >
           <span className="text-gold-gradient block drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-            Sertanejo FM
+            A7 Sertanejo FM
           </span>
           <span className="block mt-3 text-3xl sm:text-4xl md:text-5xl text-cream drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
             A Rádio Sertaneja 24 Horas

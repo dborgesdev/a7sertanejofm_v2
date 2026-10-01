@@ -19,11 +19,11 @@ export function AppEcosystemSection() {
             Aplicativo Oficial
           </p>
           <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl leading-tight text-coffee-medium font-bold">
-            <span className="text-gold-gradient-dark">Sertanejo FM</span>{" "}
+            <span className="text-gold-gradient-dark">A7 Sertanejo FM</span>{" "}
             <span>em Todos os Seus Dispositivos</span>
           </h2>
           <p className="mt-6 text-[#4a3e31] font-medium leading-relaxed">
-            Sem complicações. A Sertanejo FM foi desenvolvida para rodar com alta fidelidade sonora
+            Sem complicações. A A7 Sertanejo FM foi desenvolvida para rodar com alta fidelidade sonora
             e estabilidade em qualquer tela. Onde tiver internet, a nossa frequência está com você.
           </p>
 
@@ -31,7 +31,7 @@ export function AppEcosystemSection() {
           <div className="mt-8 rounded-2xl border border-[rgba(26,19,12,0.2)] bg-[rgba(255,255,255,0.45)] backdrop-blur-md p-5 shadow-sm">
             <p className="text-sm text-coffee-medium">
               <span className="text-[#8c5e14] font-bold">Baixe agora</span> o aplicativo oficial da
-              Sertanejo FM —{" "}
+              A7 Sertanejo FM —{" "}
               <span className="italic text-[#4a3e31] font-medium">A mais gostosa de ouvir!</span>
             </p>
           </div>
@@ -70,7 +70,7 @@ export function AppEcosystemSection() {
           <div className="absolute inset-0 bg-[#8c5e14]/20 blur-3xl rounded-full opacity-60" />
           <img
             src={phone}
-            alt="App Sertanejo FM"
+            alt="App A7 Sertanejo FM"
             loading="lazy"
             className="relative w-full max-w-md drop-shadow-[0_30px_45px_rgba(26,19,12,0.35)]"
           />

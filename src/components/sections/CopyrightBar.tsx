@@ -4,7 +4,7 @@ export function CopyrightBar() {
   return (
     <div className="bg-[#050403] border-t border-[rgba(229,169,60,0.15)]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#7a7266]">
-        <p>© 2026 Sertanejo FM. Todos os direitos reservados.</p>
+        <p>© 2026 A7 Sertanejo FM. Todos os direitos reservados.</p>
         <p>
           Desenvolvido com maestria por{" "}
           <a
