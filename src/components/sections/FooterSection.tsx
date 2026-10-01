@@ -13,7 +13,7 @@ export function FooterSection() {
           <div className="flex items-center gap-3">
             <img
               src={logo}
-              alt="Sertanejo FM"
+              alt="A7 Sertanejo FM"
               className="h-26 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,215,0,0.3)] transition-transform duration-300 hover:scale-105"
             />
           </div>
