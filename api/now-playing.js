@@ -1,4 +1,4 @@
-const STATS_URL = "https://s03.svrdedicado.org:8046/stats?json=1";
+const STATS_URL = "https://s04.svrdedicado.org:7916/stats?json=1";
 
 export default async function handler(request, response) {
   if (request.method !== "GET") {
