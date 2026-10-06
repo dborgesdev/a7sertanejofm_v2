@@ -8,7 +8,7 @@ export const SITE_DATA = {
   location: "Apucarana - Paraná",
   instagramHandle: "@7sertanejofmoficial",
   instagramUrl: "https://www.instagram.com/7sertanejofmoficial",
-  streamUrl: "https://s04.svrdedicado.org:7916/stream",
+  streamIframeUrl: "https://player.svrdedicado.org/player-topo-html5/7916/000000",
   appUrl: "https://player.svrdedicado.org/player-app-multi-plataforma/7916",
   developerUrl: "https://smartlocal.com.br",
   developerName: "Douglas Borges - Smart Local",
